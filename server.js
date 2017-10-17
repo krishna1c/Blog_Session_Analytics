@@ -13,7 +13,7 @@
     var MongoDBStore = require('connect-mongodb-session')(session);
     var store = new MongoDBStore(
         {
-          uri: 'mongodb://blockbuilder:blockbuilder@ds119685.mlab.com:19685/express',
+          uri: 'mongodb://blockbuilder:blockbuilder@ds121565.mlab.com:21565/express',
           collection: 'sessions'
         });
   
@@ -47,7 +47,7 @@
      
     // configuration ===============================================================
     //mongoose.connect('mongodb://heroku_wzx292v1:ov4ufiasdkmta14k26g2jl3i9a@ds129010.mlab.com:29010/heroku_wzx292v1');     // connect to mongoDB database on modulus.io
-    mongoose.connect('mongodb://blockbuilder:blockbuilder@ds119685.mlab.com:19685/express');
+    mongoose.connect('mongodb://blockbuilder:blockbuilder@ds121565.mlab.com:21565/express');
     app.use(express.static(__dirname + '/public'));                 // set the static files location /public/img will be /img for users
     app.use(morgan('dev'));                                         // log every request to the console
     app.use(bodyParser.urlencoded({'extended':'true'}));            // parse application/x-www-form-urlencoded
